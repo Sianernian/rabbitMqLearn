@@ -16,7 +16,7 @@ func main() {
 		log.Fatalf("produce1 conn.Channel err:%+v", err)
 	}
 
-	q, err := ch.QueueDeclare("an", false, false, false, false, nil)
+	q, err := ch.QueueDeclare("quan", false, false, false, false, nil)
 	if err != nil {
 		log.Fatalf("ch.QueueDeclare err:%+v", err)
 	}

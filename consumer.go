@@ -22,7 +22,7 @@ func main() {
 			defer ch.Close()
 			// 队列声明
 			q, err := ch.QueueDeclare(
-				"an",
+				"quan",
 				false,
 				false,
 				false,
