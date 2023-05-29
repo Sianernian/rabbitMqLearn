@@ -10,7 +10,7 @@ func main() {
 	conn := utils.RabbitMQConn()
 	defer conn.Close()
 
-	forever := make(chan bool)
+	forever := make(chan bool) // 保持协程处于堵塞状态，确保协程执行完毕
 
 	for i := 0; i < 10; i++ {
 		go func(num int) {

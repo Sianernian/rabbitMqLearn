@@ -16,7 +16,13 @@ func main() {
 		log.Fatalf("produce1 conn.Channel err:%+v", err)
 	}
 
-	q, err := ch.QueueDeclare("quan", false, false, false, false, nil)
+	q, err := ch.QueueDeclare(
+		"quan",
+		false, //是否持久化存储（磁盘） 默认 存在内存中
+		false, //
+		false, //是否供一个消费者进行消费，是否进行消息共享
+		false,
+		nil)
 	if err != nil {
 		log.Fatalf("ch.QueueDeclare err:%+v", err)
 	}
